@@ -3,8 +3,8 @@
  * @param {string} string
  * @returns {string}
  */
-export const capitalizeString = 0;
-const newString =()=> capitalizeString.toUpperCase();
+export const capitalizeString = (string) => string.split(' ').map((item) => item.charAt(0).toUpperCase() + word.slice(1)).join();
+
 /**
  * Должна быть function declaration
  * @param {string} string
@@ -15,13 +15,24 @@ export const fenceString = 0;
 const fencedString = () => {
 
 }
+
 /**
  * Должна быть function expression
  * @param {'uppercase'|'lowercase'|'capitalize'|'fence'} action
  * @param {string} string
  * @returns {string}
  */
-export const reducerIf = 0;
+export const reducerIf = function (action, string) {
+    if (action === 'uppercase') {
+        return string.toUpperCase();
+    } else if (action === 'lowercase') {
+        return string.toLowerCase();
+    } else if (action === 'capitalize') {
+        return capitalizeString(string)
+    } else if (action === 'fence') {
+        return fencedString(string)
+    }
+}
 
 /**
  * Стрелочная
@@ -29,7 +40,16 @@ export const reducerIf = 0;
  * @param {string} string
  * @returns {string}
  */
-export const reducerSwitch = 0;
+export const reducerSwitch = (action, string) => {
+    switch (action) {
+        case "uppercase":
+            return string.toUpperCase();
+        case "lowercase":
+            return string.toLowerCase();
+        case "fence":
+            return string.fencedString();
+    }
+};
 
 /**
  Стрелочная
