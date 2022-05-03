@@ -4,7 +4,7 @@
  * @returns {string}
  */
 export const capitalizeString = 0;
-
+const newString =()=> capitalizeString.toUpperCase();
 /**
  * Должна быть function declaration
  * @param {string} string
@@ -12,6 +12,9 @@ export const capitalizeString = 0;
  */
 export const fenceString = 0;
 
+const fencedString = () => {
+
+}
 /**
  * Должна быть function expression
  * @param {'uppercase'|'lowercase'|'capitalize'|'fence'} action
