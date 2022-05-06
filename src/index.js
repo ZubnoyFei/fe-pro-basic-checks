@@ -6,6 +6,8 @@
 export const capitalizeString = (string) => string.split(' ').map((item) => item.charAt(0).toUpperCase() + word.slice(1)).join();
 
 
+
+
 /**
  * Должна быть function declaration
  * @param {string} string
